@@ -10,27 +10,31 @@
 header {
     background-color: #E6DFC6;
     text-align: center;
-    padding: 20px;
-    font-size: 24px;
-    font-weight: bold;
+    padding: 25px 0;
+}
+
+header h1 {
+    font-size: 28px;
+    font-weight: normal; /* No bold */
 }
 
 /* Main Content */
 main {
     width: 60%;
-    margin: 40px auto;
-    text-align: left;
+    margin: 50px auto;
 }
 
 /* Subject Sections */
 .subject {
-    position: relative;
-    margin-bottom: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 0;
 }
 
 .subject a {
     font-size: 22px;
-    font-weight: bold;
+    font-weight: normal; /* No bold */
     text-decoration: none;
     color: black;
 }
@@ -39,27 +43,18 @@ main {
     text-decoration: underline;
 }
 
-/* Exam Board (Aligned Right) */
+/* Exam Board (Aligned Properly) */
 .exam-board {
-    position: absolute;
-    right: 0;
     font-size: 18px;
-    font-weight: bold;
-}
-
-/* Description */
-.subject p {
-    font-size: 14px;
-    color: gray;
-    margin: 5px 0;
+    font-weight: normal; /* No bold */
 }
 
 /* Divider */
 hr {
     border: none;
     border-top: 1px solid black;
-    margin-top: 10px;
 }
+
 
 
 
