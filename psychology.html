@@ -3,34 +3,84 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Psychology (CAIE)</title>
+  <title>Interactive Psychology (CAIE)</title>
   <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+  <style>
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 1000;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      width: 80%;
+      height: 80%;
+      background-color: white;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      border-radius: 10px;
+      padding: 20px;
+    }
+    .modal iframe {
+      width: 100%;
+      height: 90%;
+      border: none;
+    }
+    .close {
+      position: absolute;
+      top: 10px;
+      right: 20px;
+      font-size: 20px;
+      cursor: pointer;
+    }
+  </style>
 </head>
 <body>
   <header>
-    <h1>Psychology (CAIE)</h1>
+    <h1>🧠 Interactive Psychology (CAIE)</h1>
   </header>
 
   <main>
-    <section>
+    <section class="chapter">
       <h2>📖 Chapter 1: Research Methods</h2>
-      <p>Overview of qualitative and quantitative research methods.</p>
+      <p>Test your knowledge of qualitative and quantitative research methods!</p>
       <ul>
-        <li><a href="notes/research-methods.pdf">Download Notes (PDF)</a></li>
-        <li><a href="https://example.com/psych-research-video" target="_blank">Watch Video</a></li>
+        <li><a href="notes/research-methods.pdf">📄 Download Notes (PDF)</a></li>
+        <li><a href="#" onclick="openModal('https://example.com/psych-research-video')">▶️ Watch Video</a></li>
+        <li><button onclick="startQuiz('researchMethods')">📝 Take Quiz</button></li>
+        <li><button onclick="showFlashcards('researchMethods')">📚 Flashcards</button></li>
       </ul>
     </section>
 
-    <section>
+    <section class="chapter">
       <h2>🧠 Chapter 2: Biological Psychology</h2>
-      <p>Understanding brain functions and their impact on behavior.</p>
+      <p>Explore brain functions and how they influence behavior.</p>
       <ul>
-        <li><a href="notes/biological-psychology.pdf">Download Notes (PDF)</a></li>
-        <li><a href="https://example.com/biopsychology-lecture" target="_blank">Watch Lecture</a></li>
+        <li><a href="notes/biological-psychology.pdf">📄 Download Notes (PDF)</a></li>
+        <li><a href="#" onclick="openModal('https://example.com/biopsychology-lecture')">▶️ Watch Lecture</a></li>
+        <li><button onclick="startQuiz('biologicalPsychology')">📝 Take Quiz</button></li>
+        <li><button onclick="showFlashcards('biologicalPsychology')">📚 Flashcards</button></li>
       </ul>
     </section>
-
+  
     <p><a href="index.html">🔙 Back to Home</a></p>
   </main>
+
+  <div id="modal" class="modal">
+    <span class="close" onclick="closeModal()">&times;</span>
+    <iframe id="modalContent"></iframe>
+  </div>
+
+  <script>
+    function openModal(url) {
+      document.getElementById('modalContent').src = url;
+      document.getElementById('modal').style.display = 'block';
+    }
+    function closeModal() {
+      document.getElementById('modal').style.display = 'none';
+      document.getElementById('modalContent').src = '';
+    }
+  </script>
 </body>
 </html>
+
