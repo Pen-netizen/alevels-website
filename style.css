@@ -5,18 +5,41 @@ body {
   padding: 0;
   background-color: #fff;
   color: #333;
+  text-align: center; /* Centers the header */
+}
+
+/* Header Styling */
+header {
+  background-color: #f4f4f4;
+  padding: 20px;
+  margin-bottom: 30px;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+  margin: 0;
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #333;
+}
+
+header p {
+  margin: 5px 0 0;
+  font-size: 1.2rem;
+  color: #666;
 }
 
 /* Main layout */
 main {
   width: 60%;
-  margin: 50px auto;
+  margin: 0 auto;
+  text-align: left; /* Aligns subjects back to the left */
 }
 
 /* Subject Sections */
 .subject {
   padding: 20px 0;
-  border-bottom: 1px solid #eee;
+  border-bottom: none; /* No more underlines */
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
@@ -62,6 +85,7 @@ main {
   background-color: #ffe0b2;
   color: #f57c00;
 }
+
 
 
 
