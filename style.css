@@ -1,90 +1,66 @@
-/* General Styling */
-body {
-  font-family: 'Arial', sans-serif;
-  margin: 0;
-  padding: 0;
-  background-color: #fff;
-  color: #333;
-  text-align: center; /* Centers the header */
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
 }
 
-/* Header Styling */
+/* Header */
 header {
-  background-color: #f4f4f4;
-  padding: 20px;
-  margin-bottom: 30px;
-  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    background-color: #E6DFC6;
+    text-align: center;
+    padding: 20px;
+    font-size: 24px;
+    font-weight: bold;
 }
 
-header h1 {
-  margin: 0;
-  font-size: 2.5rem;
-  font-weight: bold;
-  color: #333;
-}
-
-header p {
-  margin: 5px 0 0;
-  font-size: 1.2rem;
-  color: #666;
-}
-
-/* Main layout */
+/* Main Content */
 main {
-  width: 60%;
-  margin: 0 auto;
-  text-align: left; /* Aligns subjects back to the left */
+    width: 60%;
+    margin: 40px auto;
+    text-align: left;
 }
 
 /* Subject Sections */
 .subject {
-  padding: 20px 0;
-  border-bottom: none; /* No more underlines */
-  transition: background-color 0.3s ease, color 0.3s ease;
+    position: relative;
+    margin-bottom: 30px;
 }
 
-/* Container to align subject name on the left & exam board on the right */
-.subject-container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+.subject a {
+    font-size: 22px;
+    font-weight: bold;
+    text-decoration: none;
+    color: black;
 }
 
-/* Text Styling */
-.subject h2 {
-  margin: 0;
-  font-size: 1.8rem;
-  font-weight: bold;
+.subject a:hover {
+    text-decoration: underline;
 }
 
-.subject p {
-  margin: 5px 0 0;
-  font-size: 1rem;
-  color: #666;
-}
-
-/* Exam Board Styling */
+/* Exam Board (Aligned Right) */
 .exam-board {
-  font-size: 1rem;
-  color: #777;
-  font-weight: bold;
+    position: absolute;
+    right: 0;
+    font-size: 18px;
+    font-weight: bold;
 }
 
-/* Hover Effects */
-#psychology:hover {
-  background-color: #b3e5fc;
-  color: #0277bd;
+/* Description */
+.subject p {
+    font-size: 14px;
+    color: gray;
+    margin: 5px 0;
 }
 
-#sociology:hover {
-  background-color: #c8e6c9;
-  color: #2e7d32;
+/* Divider */
+hr {
+    border: none;
+    border-top: 1px solid black;
+    margin-top: 10px;
 }
 
-#media:hover {
-  background-color: #ffe0b2;
-  color: #f57c00;
-}
 
 
 
