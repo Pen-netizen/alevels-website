@@ -15,16 +15,16 @@ main {
 
 /* Subject Sections */
 .subject {
-  padding: 20px;
+  padding: 20px 0;
   border-bottom: 1px solid #eee;
-  text-align: left; /* Aligns text to match the original layout */
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-.subject a {
-  text-decoration: none;
-  color: inherit;
-  display: block;
+/* Container to align subject name on the left & exam board on the right */
+.subject-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 /* Text Styling */
@@ -35,17 +35,15 @@ main {
 }
 
 .subject p {
-  margin: 5px 0;
+  margin: 5px 0 0;
   font-size: 1rem;
   color: #666;
 }
 
 /* Exam Board Styling */
 .exam-board {
-  display: block;
-  font-size: 0.9rem;
-  color: #aaa;
-  margin-top: 5px;
+  font-size: 1rem;
+  color: #777;
   font-weight: bold;
 }
 
@@ -64,6 +62,7 @@ main {
   background-color: #ffe0b2;
   color: #f57c00;
 }
+
 
 
 
