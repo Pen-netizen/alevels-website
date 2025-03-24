@@ -3,58 +3,79 @@ body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
-  background-color: #f4f4f4;
-  text-align: center;
-}
-
-header {
-  background-color: #333;
-  color: #fff;
-  padding: 2rem 0;
-}
-
-header h1 {
-  margin: 0;
-  font-size: 2.5rem;
-}
-
-/* Container for the boxes */
-.container {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  margin: 2rem auto;
-  max-width: 800px;
-  gap: 20px;
-}
-
-/* Subject boxes */
-.subject-box {
-  border: 2px solid #ccc;
-  border-radius: 8px;
-  width: 220px;
-  padding: 20px;
-  text-decoration: none;
+  background-color: #fff;
   color: #333;
+}
+
+/* Header */
+header {
+  text-align: left;
+  padding: 2rem;
+  font-size: 2rem;
   font-weight: bold;
-  transition: transform 0.3s, border-color 0.3s;
+  border-bottom: 2px solid #eee;
 }
 
-/* Colors for each subject */
-#psychology {
-  background-color: #b3e5fc; /* Light Blue */
-  border-color: #0288d1;
-}
-#sociology {
-  background-color: #c8e6c9; /* Light Green */
-  border-color: #388e3c;
-}
-#media {
-  background-color: #ffe0b2; /* Light Orange */
-  border-color: #f57c00;
+/* Subject sections */
+.subject {
+  width: 80%;
+  margin: 20px auto;
+  padding: 20px;
+  border-bottom: 1px solid #eee;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-/* Hover effect */
-.subject-box:hover {
-  transform: scale(1.05);
+.subject a {
+  text-decoration: none;
+  color: inherit;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
+
+.subject h2 {
+  margin: 0;
+  font-size: 1.5rem;
+}
+
+.subject p {
+  margin: 5px 0 0;
+  font-size: 1rem;
+  color: #666;
+}
+
+/* Icons */
+.subject i {
+  font-size: 2rem;
+  color: #bbb;
+  transition: color 0.3s ease;
+}
+
+/* Hover Effects */
+#psychology:hover {
+  background-color: #b3e5fc;
+  color: #0277bd;
+}
+
+#psychology:hover i {
+  color: #0277bd;
+}
+
+#sociology:hover {
+  background-color: #c8e6c9;
+  color: #2e7d32;
+}
+
+#sociology:hover i {
+  color: #2e7d32;
+}
+
+#media:hover {
+  background-color: #ffe0b2;
+  color: #f57c00;
+}
+
+#media:hover i {
+  color: #f57c00;
+}
+
